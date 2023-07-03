@@ -3,9 +3,10 @@ import {
   NonDeletedExcalidrawElement,
   NonDeleted,
   ExcalidrawFrameElement,
+  ExcalidrawLinearElement,
 } from "./types";
 import { isInvisiblySmallElement } from "./sizeHelpers";
-import { isLinearElementType } from "./typeChecks";
+import { isBoundToContainer, isLinearElementType } from "./typeChecks";
 
 export {
   newElement,
@@ -93,11 +94,22 @@ export const isNonDeletedElement = <T extends ExcalidrawElement>(
 const _clearElements = (
   elements: readonly ExcalidrawElement[],
 ): ExcalidrawElement[] =>
-  getNonDeletedElements(elements).map((element) =>
-    isLinearElementType(element.type)
-      ? { ...element, lastCommittedPoint: null }
-      : element,
-  );
+  getNonDeletedElements(elements).map((element) => {
+    if (isLinearElementType(element.type)) {
+      element = {
+        ...element,
+        lastCommittedPoint: null,
+      } as ExcalidrawLinearElement;
+    }
+    if (isBoundToContainer(element) && element.groupIds.length > 0) {
+      element = {
+        ...element,
+        groupIds: [],
+        containerId: null,
+      };
+    }
+    return element;
+  });
 
 export const clearElementsForDatabase = (
   elements: readonly ExcalidrawElement[],

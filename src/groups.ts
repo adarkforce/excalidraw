@@ -212,7 +212,9 @@ export const getMaximumGroups = (
   return Array.from(groups.values());
 };
 
-export const elementsAreInSameGroup = (elements: ExcalidrawElement[]) => {
+export const elementsAreInSameGroup = (
+  elements: readonly ExcalidrawElement[],
+) => {
   const allGroups = elements.flatMap((element) => element.groupIds);
   const groupCount = new Map<string, number>();
   let maxGroup = 0;

@@ -1920,6 +1920,16 @@ class App extends React.Component<AppProps, AppState> {
           },
         });
       } else if (data.elements) {
+        // remove groupIds from pasted elements
+        if (this.state.editingGroupId === null) {
+          data.elements = data.elements.map((el) => {
+            el = {
+              ...el,
+              groupIds: [],
+            };
+            return el;
+          });
+        }
         // TODO remove formatting from elements if isPlainPaste
         this.addElementsFromPasteOrLibrary({
           elements: data.elements,

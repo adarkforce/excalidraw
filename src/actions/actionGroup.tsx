@@ -74,7 +74,8 @@ export const actionGroup = register({
       {
         includeBoundTextElement: true,
       },
-    );
+    ).filter((element) => !isBoundToContainer(element));
+
     if (selectedElements.length < 2) {
       // nothing to group
       return { appState, elements, commitToHistory: false };
