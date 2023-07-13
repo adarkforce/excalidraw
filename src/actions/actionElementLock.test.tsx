@@ -56,7 +56,7 @@ describe("element locking", () => {
     const item = queryByTestId(UI.queryContextMenu()!, "unlockAllElements");
     expect(item).not.toBe(null);
 
-    fireEvent.click(item!.querySelector("button")!);
+    fireEvent.click(item!);
 
     expect(h.elements.map((el) => el.locked)).toEqual([false, false, false]);
     // should select the unlocked elements

@@ -4,6 +4,7 @@ import { queryByText, queryByTestId } from "@testing-library/react";
 import { GRID_SIZE, THEME } from "../../constants";
 import { t } from "../../i18n";
 import { useMemo } from "react";
+import { UI } from "../helpers/ui";
 
 const { h } = window;
 
@@ -28,7 +29,7 @@ describe("<Excalidraw/>", () => {
         clientX: 1,
         clientY: 1,
       });
-      const contextMenu = document.querySelector(".context-menu");
+      const contextMenu = UI.queryContextMenu();
       fireEvent.click(queryByText(contextMenu as HTMLElement, "Zen mode")!);
       expect(h.state.zenModeEnabled).toBe(true);
       expect(
@@ -48,7 +49,7 @@ describe("<Excalidraw/>", () => {
         clientX: 1,
         clientY: 1,
       });
-      const contextMenu = document.querySelector(".context-menu");
+      const contextMenu = UI.queryContextMenu();
       expect(queryByText(contextMenu as HTMLElement, "Zen mode")).toBe(null);
       expect(h.state.zenModeEnabled).toBe(true);
       expect(
@@ -98,7 +99,7 @@ describe("<Excalidraw/>", () => {
         clientX: 1,
         clientY: 1,
       });
-      const contextMenu = document.querySelector(".context-menu");
+      const contextMenu = UI.queryContextMenu();
       fireEvent.click(queryByText(contextMenu as HTMLElement, "Show grid")!);
       expect(h.state.gridSize).toBe(GRID_SIZE);
     });
@@ -117,7 +118,7 @@ describe("<Excalidraw/>", () => {
         clientX: 1,
         clientY: 1,
       });
-      const contextMenu = document.querySelector(".context-menu");
+      const contextMenu = UI.queryContextMenu();
       expect(queryByText(contextMenu as HTMLElement, "Show grid")).toBe(null);
       expect(h.state.gridSize).toBe(null);
     });

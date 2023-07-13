@@ -2,6 +2,7 @@
   "labels": {
     "paste": "Paste",
     "pasteAsPlaintext": "Paste as plaintext",
+    "copyPasteAs": "Copy/Paste as...",
     "pasteCharts": "Paste charts",
     "selectAll": "Select all",
     "multiSelect": "Add element to selection",

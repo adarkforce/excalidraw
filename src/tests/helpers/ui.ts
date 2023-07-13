@@ -329,7 +329,7 @@ export class UI {
 
   static queryContextMenu = () => {
     return GlobalTestState.renderResult.container.querySelector(
-      ".context-menu",
+      ".DropdownMenuContent",
     ) as HTMLElement | null;
   };
 }

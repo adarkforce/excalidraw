@@ -80,8 +80,9 @@ describe("contextMenu element", () => {
       clientY: 1,
     });
     const contextMenu = UI.queryContextMenu();
-    const contextMenuOptions =
-      contextMenu?.querySelectorAll(".context-menu li");
+    const contextMenuOptions = contextMenu?.querySelectorAll(
+      ".DropdownMenuContent .DropdownMenuItem",
+    );
     const expectedShortcutNames: ShortcutName[] = [
       "selectAll",
       "gridMode",
@@ -94,7 +95,7 @@ describe("contextMenu element", () => {
     expect(contextMenuOptions?.length).toBe(expectedShortcutNames.length);
     expectedShortcutNames.forEach((shortcutName) => {
       expect(
-        contextMenu?.querySelector(`li[data-testid="${shortcutName}"]`),
+        contextMenu?.querySelector(`*[data-testid="${shortcutName}"]`),
       ).not.toBeNull();
     });
   });
@@ -110,8 +111,9 @@ describe("contextMenu element", () => {
       clientY: 1,
     });
     const contextMenu = UI.queryContextMenu();
-    const contextMenuOptions =
-      contextMenu?.querySelectorAll(".context-menu li");
+    const contextMenuOptions = contextMenu?.querySelectorAll(
+      ".DropdownMenuContent .DropdownMenuItem",
+    );
     const expectedShortcutNames: ShortcutName[] = [
       "copyStyles",
       "pasteStyles",
@@ -132,7 +134,7 @@ describe("contextMenu element", () => {
     expect(contextMenuOptions?.length).toBe(expectedShortcutNames.length);
     expectedShortcutNames.forEach((shortcutName) => {
       expect(
-        contextMenu?.querySelector(`li[data-testid="${shortcutName}"]`),
+        contextMenu?.querySelector(`*[data-testid="${shortcutName}"]`),
       ).not.toBeNull();
     });
   });
@@ -199,8 +201,9 @@ describe("contextMenu element", () => {
     });
 
     const contextMenu = UI.queryContextMenu();
-    const contextMenuOptions =
-      contextMenu?.querySelectorAll(".context-menu li");
+    const contextMenuOptions = contextMenu?.querySelectorAll(
+      ".DropdownMenuContent .DropdownMenuItem",
+    );
     const expectedShortcutNames: ShortcutName[] = [
       "copyStyles",
       "pasteStyles",
@@ -221,7 +224,7 @@ describe("contextMenu element", () => {
     expect(contextMenuOptions?.length).toBe(expectedShortcutNames.length);
     expectedShortcutNames.forEach((shortcutName) => {
       expect(
-        contextMenu?.querySelector(`li[data-testid="${shortcutName}"]`),
+        contextMenu?.querySelector(`*[data-testid="${shortcutName}"]`),
       ).not.toBeNull();
     });
   });
@@ -252,8 +255,9 @@ describe("contextMenu element", () => {
     });
 
     const contextMenu = UI.queryContextMenu();
-    const contextMenuOptions =
-      contextMenu?.querySelectorAll(".context-menu li");
+    const contextMenuOptions = contextMenu?.querySelectorAll(
+      ".DropdownMenuContent .DropdownMenuItem",
+    );
     const expectedShortcutNames: ShortcutName[] = [
       "copyStyles",
       "pasteStyles",
@@ -274,7 +278,7 @@ describe("contextMenu element", () => {
     expect(contextMenuOptions?.length).toBe(expectedShortcutNames.length);
     expectedShortcutNames.forEach((shortcutName) => {
       expect(
-        contextMenu?.querySelector(`li[data-testid="${shortcutName}"]`),
+        contextMenu?.querySelector(`*[data-testid="${shortcutName}"]`),
       ).not.toBeNull();
     });
   });

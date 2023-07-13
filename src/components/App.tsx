@@ -250,7 +250,8 @@ import {
 import {
   ContextMenu,
   ContextMenuItems,
-  CONTEXT_MENU_SEPARATOR,
+  CONTEXT_MENU_SEPARATOR as ____SEPARATOR_____,
+  createContextMenuGroup,
 } from "./ContextMenu";
 import LayerUI from "./LayerUI";
 import { Toast } from "./Toast";
@@ -7253,17 +7254,14 @@ class App extends React.Component<AppProps, AppState> {
   private getContextMenuItems = (
     type: "canvas" | "element",
   ): ContextMenuItems => {
-    const options: ContextMenuItems = [];
-
-    options.push(actionCopyAsPng, actionCopyAsSvg);
-
     // canvas contextMenu
     // -------------------------------------------------------------------------
 
     if (type === "canvas") {
       if (this.state.viewModeEnabled) {
         return [
-          ...options,
+          actionCopyAsPng,
+          actionCopyAsSvg,
           actionToggleGridMode,
           actionToggleZenMode,
           actionToggleViewMode,
@@ -7273,14 +7271,14 @@ class App extends React.Component<AppProps, AppState> {
 
       return [
         actionPaste,
-        CONTEXT_MENU_SEPARATOR,
+        ____SEPARATOR_____,
         actionCopyAsPng,
         actionCopyAsSvg,
         copyText,
-        CONTEXT_MENU_SEPARATOR,
+        ____SEPARATOR_____,
         actionSelectAll,
         actionUnlockAllElements,
-        CONTEXT_MENU_SEPARATOR,
+        ____SEPARATOR_____,
         actionToggleGridMode,
         actionToggleZenMode,
         actionToggleViewMode,
@@ -7291,45 +7289,69 @@ class App extends React.Component<AppProps, AppState> {
     // element contextMenu
     // -------------------------------------------------------------------------
 
-    options.push(copyText);
+    const { isMobile } = this.device;
 
-    if (this.state.viewModeEnabled) {
-      return [actionCopy, ...options];
+    const finalCopyPasteOptions: ContextMenuItems = [];
+
+    if (!isMobile) {
+      finalCopyPasteOptions.push(
+        createContextMenuGroup({
+          label: t("labels.copyPasteAs"),
+          items: [
+            actionCopy,
+            actionPaste,
+            actionCut,
+            ____SEPARATOR_____,
+            copyText,
+            actionCopyAsPng,
+            actionCopyAsSvg,
+            ____SEPARATOR_____,
+            actionCopyStyles,
+            actionPasteStyles,
+          ],
+        }),
+      );
+    } else {
+      finalCopyPasteOptions.push(
+        actionCopy,
+        actionPaste,
+        ____SEPARATOR_____,
+        copyText,
+        actionCopyAsPng,
+        actionCopyAsSvg,
+        ____SEPARATOR_____,
+        actionCopyStyles,
+        actionPasteStyles,
+      );
     }
 
     return [
-      actionCut,
-      actionCopy,
-      actionPaste,
+      ...finalCopyPasteOptions,
+      ____SEPARATOR_____,
       actionSelectAllElementsInFrame,
       actionRemoveAllElementsFromFrame,
-      CONTEXT_MENU_SEPARATOR,
-      ...options,
-      CONTEXT_MENU_SEPARATOR,
-      actionCopyStyles,
-      actionPasteStyles,
-      CONTEXT_MENU_SEPARATOR,
+      ____SEPARATOR_____,
       actionGroup,
       actionUnbindText,
       actionBindText,
       actionWrapTextInContainer,
       actionUngroup,
-      CONTEXT_MENU_SEPARATOR,
+      ____SEPARATOR_____,
       actionAddToLibrary,
-      CONTEXT_MENU_SEPARATOR,
+      ____SEPARATOR_____,
       actionSendBackward,
       actionBringForward,
       actionSendToBack,
       actionBringToFront,
-      CONTEXT_MENU_SEPARATOR,
+      ____SEPARATOR_____,
       actionFlipHorizontal,
       actionFlipVertical,
-      CONTEXT_MENU_SEPARATOR,
+      ____SEPARATOR_____,
       actionToggleLinearEditor,
       actionLink,
       actionDuplicateSelection,
       actionToggleElementLock,
-      CONTEXT_MENU_SEPARATOR,
+      ____SEPARATOR_____,
       actionDeleteSelected,
     ];
   };

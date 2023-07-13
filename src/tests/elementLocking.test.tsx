@@ -151,9 +151,7 @@ describe("element locking", () => {
     const contextMenu = UI.queryContextMenu();
     expect(contextMenu).not.toBeNull();
     expect(
-      contextMenu?.querySelector(
-        `li[data-testid="toggleElementLock"] .context-menu-item__label`,
-      ),
+      contextMenu?.querySelector(`*[data-testid="toggleElementLock"]`),
     ).toHaveTextContent(t("labels.elementLock.unlock"));
   });
 

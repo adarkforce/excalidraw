@@ -204,7 +204,7 @@ describe("Test Linear Elements", () => {
       clientY: midpoint[1],
     });
     // Enter line editor
-    let contextMenu = document.querySelector(".context-menu");
+    let contextMenu = UI.queryContextMenu();
     fireEvent.contextMenu(GlobalTestState.canvas, {
       button: 2,
       clientX: midpoint[0],
@@ -220,7 +220,7 @@ describe("Test Linear Elements", () => {
       clientX: midpoint[0],
       clientY: midpoint[1],
     });
-    contextMenu = document.querySelector(".context-menu");
+    contextMenu = UI.queryContextMenu();
     fireEvent.contextMenu(GlobalTestState.canvas, {
       button: 2,
       clientX: midpoint[0],
@@ -1210,7 +1210,7 @@ describe("Test Linear Elements", () => {
         clientX: 20,
         clientY: 30,
       });
-      let contextMenu = document.querySelector(".context-menu");
+      let contextMenu = UI.queryContextMenu();
 
       fireEvent.click(
         queryByText(contextMenu as HTMLElement, "Bind text to the container")!,
@@ -1235,7 +1235,7 @@ describe("Test Linear Elements", () => {
         clientX: 20,
         clientY: 30,
       });
-      contextMenu = document.querySelector(".context-menu");
+      contextMenu = UI.queryContextMenu();
       fireEvent.click(queryByText(contextMenu as HTMLElement, "Unbind text")!);
       expect(container.boundElements).toEqual([]);
       expect(text).toEqual(

@@ -587,7 +587,7 @@ exports[`<Excalidraw/> Test UIOptions prop Test canvasActions should render menu
               style="width: 1px; height: 100%; margin: 0px auto;"
             />
             <button
-              aria-controls="radix-:r0:"
+              aria-controls="radix-:rq:"
               aria-expanded="false"
               aria-haspopup="dialog"
               aria-label="Canvas background"

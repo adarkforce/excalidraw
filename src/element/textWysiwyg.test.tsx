@@ -764,7 +764,7 @@ describe("textWysiwyg", () => {
         clientX: 20,
         clientY: 30,
       });
-      const contextMenu = document.querySelector(".context-menu");
+      const contextMenu = UI.queryContextMenu();
       fireEvent.click(
         queryByText(contextMenu as HTMLElement, "Bind text to the container")!,
       );
@@ -908,7 +908,7 @@ describe("textWysiwyg", () => {
         clientX: 20,
         clientY: 30,
       });
-      const contextMenu = document.querySelector(".context-menu");
+      const contextMenu = UI.queryContextMenu();
       fireEvent.click(queryByText(contextMenu as HTMLElement, "Unbind text")!);
       expect(h.elements[0].boundElements).toEqual([]);
       expect((h.elements[1] as ExcalidrawTextElement).containerId).toEqual(
@@ -1159,7 +1159,7 @@ describe("textWysiwyg", () => {
         clientX: 20,
         clientY: 30,
       });
-      let contextMenu = document.querySelector(".context-menu");
+      let contextMenu = UI.queryContextMenu();
 
       fireEvent.click(
         queryByText(contextMenu as HTMLElement, "Bind text to the container")!,
@@ -1173,7 +1173,7 @@ describe("textWysiwyg", () => {
         clientX: 20,
         clientY: 30,
       });
-      contextMenu = document.querySelector(".context-menu");
+      contextMenu = UI.queryContextMenu();
       fireEvent.click(queryByText(contextMenu as HTMLElement, "Unbind text")!);
       expect(h.elements[0].boundElements).toEqual([]);
       expect(getOriginalContainerHeightFromCache(container.id)).toBe(null);
@@ -1412,7 +1412,7 @@ describe("textWysiwyg", () => {
         clientY: 30,
       });
 
-      const contextMenu = document.querySelector(".context-menu");
+      const contextMenu = UI.queryContextMenu();
       fireEvent.click(
         queryByText(contextMenu as HTMLElement, "Wrap text in a container")!,
       );

@@ -12,35 +12,30 @@ Object {
   "contextMenu": Object {
     "items": Array [
       Object {
-        "contextItemLabel": "labels.cut",
-        "keyTest": [Function],
-        "name": "cut",
-        "perform": [Function],
-        "predicate": [Function],
-        "trackEvent": Object {
-          "category": "element",
-        },
+        "isContextMenuGroup": true,
+        "items": Array [
+          Object {
+            "contextItemLabel": "labels.copyStyles",
+            "keyTest": [Function],
+            "name": "copyStyles",
+            "perform": [Function],
+            "trackEvent": Object {
+              "category": "element",
+            },
+          },
+          Object {
+            "contextItemLabel": "labels.pasteStyles",
+            "keyTest": [Function],
+            "name": "pasteStyles",
+            "perform": [Function],
+            "trackEvent": Object {
+              "category": "element",
+            },
+          },
+        ],
+        "label": "Copy/Paste as...",
       },
-      Object {
-        "contextItemLabel": "labels.copy",
-        "keyTest": undefined,
-        "name": "copy",
-        "perform": [Function],
-        "predicate": [Function],
-        "trackEvent": Object {
-          "category": "element",
-        },
-      },
-      Object {
-        "contextItemLabel": "labels.paste",
-        "keyTest": undefined,
-        "name": "paste",
-        "perform": [Function],
-        "predicate": [Function],
-        "trackEvent": Object {
-          "category": "element",
-        },
-      },
+      "separator",
       Object {
         "contextItemLabel": "labels.selectAllElementsInFrame",
         "name": "selectAllElementsInFrame",
@@ -57,54 +52,6 @@ Object {
         "predicate": [Function],
         "trackEvent": Object {
           "category": "history",
-        },
-      },
-      "separator",
-      Object {
-        "contextItemLabel": "labels.copyAsPng",
-        "keyTest": [Function],
-        "name": "copyAsPng",
-        "perform": [Function],
-        "predicate": [Function],
-        "trackEvent": Object {
-          "category": "element",
-        },
-      },
-      Object {
-        "contextItemLabel": "labels.copyAsSvg",
-        "name": "copyAsSvg",
-        "perform": [Function],
-        "predicate": [Function],
-        "trackEvent": Object {
-          "category": "element",
-        },
-      },
-      Object {
-        "contextItemLabel": "labels.copyText",
-        "name": "copyText",
-        "perform": [Function],
-        "predicate": [Function],
-        "trackEvent": Object {
-          "category": "element",
-        },
-      },
-      "separator",
-      Object {
-        "contextItemLabel": "labels.copyStyles",
-        "keyTest": [Function],
-        "name": "copyStyles",
-        "perform": [Function],
-        "trackEvent": Object {
-          "category": "element",
-        },
-      },
-      Object {
-        "contextItemLabel": "labels.pasteStyles",
-        "keyTest": [Function],
-        "name": "pasteStyles",
-        "perform": [Function],
-        "trackEvent": Object {
-          "category": "element",
         },
       },
       "separator",
@@ -4565,35 +4512,30 @@ Object {
   "contextMenu": Object {
     "items": Array [
       Object {
-        "contextItemLabel": "labels.cut",
-        "keyTest": [Function],
-        "name": "cut",
-        "perform": [Function],
-        "predicate": [Function],
-        "trackEvent": Object {
-          "category": "element",
-        },
+        "isContextMenuGroup": true,
+        "items": Array [
+          Object {
+            "contextItemLabel": "labels.copyStyles",
+            "keyTest": [Function],
+            "name": "copyStyles",
+            "perform": [Function],
+            "trackEvent": Object {
+              "category": "element",
+            },
+          },
+          Object {
+            "contextItemLabel": "labels.pasteStyles",
+            "keyTest": [Function],
+            "name": "pasteStyles",
+            "perform": [Function],
+            "trackEvent": Object {
+              "category": "element",
+            },
+          },
+        ],
+        "label": "Copy/Paste as...",
       },
-      Object {
-        "contextItemLabel": "labels.copy",
-        "keyTest": undefined,
-        "name": "copy",
-        "perform": [Function],
-        "predicate": [Function],
-        "trackEvent": Object {
-          "category": "element",
-        },
-      },
-      Object {
-        "contextItemLabel": "labels.paste",
-        "keyTest": undefined,
-        "name": "paste",
-        "perform": [Function],
-        "predicate": [Function],
-        "trackEvent": Object {
-          "category": "element",
-        },
-      },
+      "separator",
       Object {
         "contextItemLabel": "labels.selectAllElementsInFrame",
         "name": "selectAllElementsInFrame",
@@ -4610,54 +4552,6 @@ Object {
         "predicate": [Function],
         "trackEvent": Object {
           "category": "history",
-        },
-      },
-      "separator",
-      Object {
-        "contextItemLabel": "labels.copyAsPng",
-        "keyTest": [Function],
-        "name": "copyAsPng",
-        "perform": [Function],
-        "predicate": [Function],
-        "trackEvent": Object {
-          "category": "element",
-        },
-      },
-      Object {
-        "contextItemLabel": "labels.copyAsSvg",
-        "name": "copyAsSvg",
-        "perform": [Function],
-        "predicate": [Function],
-        "trackEvent": Object {
-          "category": "element",
-        },
-      },
-      Object {
-        "contextItemLabel": "labels.copyText",
-        "name": "copyText",
-        "perform": [Function],
-        "predicate": [Function],
-        "trackEvent": Object {
-          "category": "element",
-        },
-      },
-      "separator",
-      Object {
-        "contextItemLabel": "labels.copyStyles",
-        "keyTest": [Function],
-        "name": "copyStyles",
-        "perform": [Function],
-        "trackEvent": Object {
-          "category": "element",
-        },
-      },
-      Object {
-        "contextItemLabel": "labels.pasteStyles",
-        "keyTest": [Function],
-        "name": "pasteStyles",
-        "perform": [Function],
-        "trackEvent": Object {
-          "category": "element",
         },
       },
       "separator",
@@ -5142,35 +5036,30 @@ Object {
   "contextMenu": Object {
     "items": Array [
       Object {
-        "contextItemLabel": "labels.cut",
-        "keyTest": [Function],
-        "name": "cut",
-        "perform": [Function],
-        "predicate": [Function],
-        "trackEvent": Object {
-          "category": "element",
-        },
+        "isContextMenuGroup": true,
+        "items": Array [
+          Object {
+            "contextItemLabel": "labels.copyStyles",
+            "keyTest": [Function],
+            "name": "copyStyles",
+            "perform": [Function],
+            "trackEvent": Object {
+              "category": "element",
+            },
+          },
+          Object {
+            "contextItemLabel": "labels.pasteStyles",
+            "keyTest": [Function],
+            "name": "pasteStyles",
+            "perform": [Function],
+            "trackEvent": Object {
+              "category": "element",
+            },
+          },
+        ],
+        "label": "Copy/Paste as...",
       },
-      Object {
-        "contextItemLabel": "labels.copy",
-        "keyTest": undefined,
-        "name": "copy",
-        "perform": [Function],
-        "predicate": [Function],
-        "trackEvent": Object {
-          "category": "element",
-        },
-      },
-      Object {
-        "contextItemLabel": "labels.paste",
-        "keyTest": undefined,
-        "name": "paste",
-        "perform": [Function],
-        "predicate": [Function],
-        "trackEvent": Object {
-          "category": "element",
-        },
-      },
+      "separator",
       Object {
         "contextItemLabel": "labels.selectAllElementsInFrame",
         "name": "selectAllElementsInFrame",
@@ -5187,54 +5076,6 @@ Object {
         "predicate": [Function],
         "trackEvent": Object {
           "category": "history",
-        },
-      },
-      "separator",
-      Object {
-        "contextItemLabel": "labels.copyAsPng",
-        "keyTest": [Function],
-        "name": "copyAsPng",
-        "perform": [Function],
-        "predicate": [Function],
-        "trackEvent": Object {
-          "category": "element",
-        },
-      },
-      Object {
-        "contextItemLabel": "labels.copyAsSvg",
-        "name": "copyAsSvg",
-        "perform": [Function],
-        "predicate": [Function],
-        "trackEvent": Object {
-          "category": "element",
-        },
-      },
-      Object {
-        "contextItemLabel": "labels.copyText",
-        "name": "copyText",
-        "perform": [Function],
-        "predicate": [Function],
-        "trackEvent": Object {
-          "category": "element",
-        },
-      },
-      "separator",
-      Object {
-        "contextItemLabel": "labels.copyStyles",
-        "keyTest": [Function],
-        "name": "copyStyles",
-        "perform": [Function],
-        "trackEvent": Object {
-          "category": "element",
-        },
-      },
-      Object {
-        "contextItemLabel": "labels.pasteStyles",
-        "keyTest": [Function],
-        "name": "pasteStyles",
-        "perform": [Function],
-        "trackEvent": Object {
-          "category": "element",
         },
       },
       "separator",
@@ -6035,35 +5876,30 @@ Object {
   "contextMenu": Object {
     "items": Array [
       Object {
-        "contextItemLabel": "labels.cut",
-        "keyTest": [Function],
-        "name": "cut",
-        "perform": [Function],
-        "predicate": [Function],
-        "trackEvent": Object {
-          "category": "element",
-        },
+        "isContextMenuGroup": true,
+        "items": Array [
+          Object {
+            "contextItemLabel": "labels.copyStyles",
+            "keyTest": [Function],
+            "name": "copyStyles",
+            "perform": [Function],
+            "trackEvent": Object {
+              "category": "element",
+            },
+          },
+          Object {
+            "contextItemLabel": "labels.pasteStyles",
+            "keyTest": [Function],
+            "name": "pasteStyles",
+            "perform": [Function],
+            "trackEvent": Object {
+              "category": "element",
+            },
+          },
+        ],
+        "label": "Copy/Paste as...",
       },
-      Object {
-        "contextItemLabel": "labels.copy",
-        "keyTest": undefined,
-        "name": "copy",
-        "perform": [Function],
-        "predicate": [Function],
-        "trackEvent": Object {
-          "category": "element",
-        },
-      },
-      Object {
-        "contextItemLabel": "labels.paste",
-        "keyTest": undefined,
-        "name": "paste",
-        "perform": [Function],
-        "predicate": [Function],
-        "trackEvent": Object {
-          "category": "element",
-        },
-      },
+      "separator",
       Object {
         "contextItemLabel": "labels.selectAllElementsInFrame",
         "name": "selectAllElementsInFrame",
@@ -6080,54 +5916,6 @@ Object {
         "predicate": [Function],
         "trackEvent": Object {
           "category": "history",
-        },
-      },
-      "separator",
-      Object {
-        "contextItemLabel": "labels.copyAsPng",
-        "keyTest": [Function],
-        "name": "copyAsPng",
-        "perform": [Function],
-        "predicate": [Function],
-        "trackEvent": Object {
-          "category": "element",
-        },
-      },
-      Object {
-        "contextItemLabel": "labels.copyAsSvg",
-        "name": "copyAsSvg",
-        "perform": [Function],
-        "predicate": [Function],
-        "trackEvent": Object {
-          "category": "element",
-        },
-      },
-      Object {
-        "contextItemLabel": "labels.copyText",
-        "name": "copyText",
-        "perform": [Function],
-        "predicate": [Function],
-        "trackEvent": Object {
-          "category": "element",
-        },
-      },
-      "separator",
-      Object {
-        "contextItemLabel": "labels.copyStyles",
-        "keyTest": [Function],
-        "name": "copyStyles",
-        "perform": [Function],
-        "trackEvent": Object {
-          "category": "element",
-        },
-      },
-      Object {
-        "contextItemLabel": "labels.pasteStyles",
-        "keyTest": [Function],
-        "name": "pasteStyles",
-        "perform": [Function],
-        "trackEvent": Object {
-          "category": "element",
         },
       },
       "separator",
@@ -6403,35 +6191,30 @@ Object {
   "contextMenu": Object {
     "items": Array [
       Object {
-        "contextItemLabel": "labels.cut",
-        "keyTest": [Function],
-        "name": "cut",
-        "perform": [Function],
-        "predicate": [Function],
-        "trackEvent": Object {
-          "category": "element",
-        },
+        "isContextMenuGroup": true,
+        "items": Array [
+          Object {
+            "contextItemLabel": "labels.copyStyles",
+            "keyTest": [Function],
+            "name": "copyStyles",
+            "perform": [Function],
+            "trackEvent": Object {
+              "category": "element",
+            },
+          },
+          Object {
+            "contextItemLabel": "labels.pasteStyles",
+            "keyTest": [Function],
+            "name": "pasteStyles",
+            "perform": [Function],
+            "trackEvent": Object {
+              "category": "element",
+            },
+          },
+        ],
+        "label": "Copy/Paste as...",
       },
-      Object {
-        "contextItemLabel": "labels.copy",
-        "keyTest": undefined,
-        "name": "copy",
-        "perform": [Function],
-        "predicate": [Function],
-        "trackEvent": Object {
-          "category": "element",
-        },
-      },
-      Object {
-        "contextItemLabel": "labels.paste",
-        "keyTest": undefined,
-        "name": "paste",
-        "perform": [Function],
-        "predicate": [Function],
-        "trackEvent": Object {
-          "category": "element",
-        },
-      },
+      "separator",
       Object {
         "contextItemLabel": "labels.selectAllElementsInFrame",
         "name": "selectAllElementsInFrame",
@@ -6448,54 +6231,6 @@ Object {
         "predicate": [Function],
         "trackEvent": Object {
           "category": "history",
-        },
-      },
-      "separator",
-      Object {
-        "contextItemLabel": "labels.copyAsPng",
-        "keyTest": [Function],
-        "name": "copyAsPng",
-        "perform": [Function],
-        "predicate": [Function],
-        "trackEvent": Object {
-          "category": "element",
-        },
-      },
-      Object {
-        "contextItemLabel": "labels.copyAsSvg",
-        "name": "copyAsSvg",
-        "perform": [Function],
-        "predicate": [Function],
-        "trackEvent": Object {
-          "category": "element",
-        },
-      },
-      Object {
-        "contextItemLabel": "labels.copyText",
-        "name": "copyText",
-        "perform": [Function],
-        "predicate": [Function],
-        "trackEvent": Object {
-          "category": "element",
-        },
-      },
-      "separator",
-      Object {
-        "contextItemLabel": "labels.copyStyles",
-        "keyTest": [Function],
-        "name": "copyStyles",
-        "perform": [Function],
-        "trackEvent": Object {
-          "category": "element",
-        },
-      },
-      Object {
-        "contextItemLabel": "labels.pasteStyles",
-        "keyTest": [Function],
-        "name": "pasteStyles",
-        "perform": [Function],
-        "trackEvent": Object {
-          "category": "element",
         },
       },
       "separator",
