@@ -429,7 +429,10 @@ describe("arrow", () => {
     const expectedAngle = (7 * Math.PI) / 4;
     const line = createLinearElementWithCurveInsideMinMaxPoints("arrow");
     h.app.scene.replaceAllElements([line]);
-    h.app.state.selectedElementIds[line.id] = true;
+    h.state.selectedElementIds = {
+      ...h.state.selectedElementIds,
+      [line.id]: true,
+    };
     mutateElement(line, {
       angle: originalAngle,
     });
@@ -445,7 +448,10 @@ describe("arrow", () => {
     const expectedAngle = (7 * Math.PI) / 4;
     const line = createLinearElementWithCurveInsideMinMaxPoints("arrow");
     h.app.scene.replaceAllElements([line]);
-    h.app.state.selectedElementIds[line.id] = true;
+    h.state.selectedElementIds = {
+      ...h.state.selectedElementIds,
+      [line.id]: true,
+    };
     mutateElement(line, {
       angle: originalAngle,
     });
@@ -615,7 +621,10 @@ describe("line", () => {
     const expectedAngle = (7 * Math.PI) / 4;
     const line = createLinearElementWithCurveInsideMinMaxPoints("line");
     h.app.scene.replaceAllElements([line]);
-    h.app.state.selectedElementIds[line.id] = true;
+    h.state.selectedElementIds = {
+      ...h.state.selectedElementIds,
+      [line.id]: true,
+    };
     mutateElement(line, {
       angle: originalAngle,
     });
@@ -631,7 +640,10 @@ describe("line", () => {
     const expectedAngle = (7 * Math.PI) / 4;
     const line = createLinearElementWithCurveInsideMinMaxPoints("line");
     h.app.scene.replaceAllElements([line]);
-    h.app.state.selectedElementIds[line.id] = true;
+    h.state.selectedElementIds = {
+      ...h.state.selectedElementIds,
+      [line.id]: true,
+    };
     mutateElement(line, {
       angle: originalAngle,
     });
@@ -658,14 +670,20 @@ describe("freedraw", () => {
   it("flips an unrotated drawing horizontally correctly", async () => {
     const draw = createAndReturnOneDraw();
     // select draw, since not done automatically
-    h.state.selectedElementIds[draw.id] = true;
+    h.state.selectedElementIds = {
+      ...h.state.selectedElementIds,
+      [draw.id]: true,
+    };
     await checkHorizontalFlip();
   });
 
   it("flips an unrotated drawing vertically correctly", async () => {
     const draw = createAndReturnOneDraw();
     // select draw, since not done automatically
-    h.state.selectedElementIds[draw.id] = true;
+    h.state.selectedElementIds = {
+      ...h.state.selectedElementIds,
+      [draw.id]: true,
+    };
     await checkVerticalFlip();
   });
 
@@ -675,7 +693,10 @@ describe("freedraw", () => {
 
     const draw = createAndReturnOneDraw(originalAngle);
     // select draw, since not done automatically
-    h.state.selectedElementIds[draw.id] = true;
+    h.state.selectedElementIds = {
+      ...h.state.selectedElementIds,
+      [draw.id]: true,
+    };
 
     await checkRotatedHorizontalFlip(expectedAngle);
   });
@@ -686,7 +707,10 @@ describe("freedraw", () => {
 
     const draw = createAndReturnOneDraw(originalAngle);
     // select draw, since not done automatically
-    h.state.selectedElementIds[draw.id] = true;
+    h.state.selectedElementIds = {
+      ...h.state.selectedElementIds,
+      [draw.id]: true,
+    };
 
     await checkRotatedVerticalFlip(expectedAngle);
   });
