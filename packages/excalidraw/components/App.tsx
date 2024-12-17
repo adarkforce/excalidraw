@@ -427,6 +427,7 @@ import { withBatchedUpdates, withBatchedUpdatesThrottled } from "../reactUtils";
 import { getRenderOpacity } from "../renderer/renderElement";
 import {
   hitElementBoundText,
+  hitElementBoundingBox,
   hitElementBoundingBoxOnly,
   hitElementItself,
 } from "../element/collision";
@@ -6118,9 +6119,17 @@ class App extends React.Component<AppProps, AppState> {
     );
     const threshold = this.getElementHitThreshold();
     const p = { ...pointerDownState.lastCoords };
+
+    const nonDeletedElementsMap = this.scene.getNonDeletedElementsMap();
+
     let samplingInterval = 0;
     while (samplingInterval <= distance) {
-      const hitElements = this.getElementsAtPosition(p.x, p.y);
+      const hitElements = nonDeletedElements.filter(
+        (el) =>
+          hitElementBoundingBox(p.x, p.y, el, nonDeletedElementsMap) &&
+          this.hitElement(p.x, p.y, el),
+      );
+
       processElements(hitElements);
 
       // Exit since we reached current point
